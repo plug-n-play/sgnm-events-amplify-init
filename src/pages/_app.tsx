@@ -1,6 +1,10 @@
 import Head from 'next/head'
+import { Amplify } from "aws-amplify"
+import awsExports from "../aws-exports"
 import '../styles/globals.css'
 import { AppProps } from 'next/app'
+
+Amplify.configure({ ...awsExports, ssr: true })
 
 export default function SGNMEvents({ Component, pageProps }: AppProps) {
   return (
