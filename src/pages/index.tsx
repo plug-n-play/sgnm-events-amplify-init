@@ -26,7 +26,8 @@ export default function EventsPage({ signOut }) {
 
         <div className="sgnm-events-container">
           {events.map((event) => (
-            <Event {...event} key={event.id} />
+            // @ts-ignore
+            <Event {...event} key={event?.id} />
           ))}
         </div>
       </section>
